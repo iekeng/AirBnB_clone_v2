@@ -5,8 +5,8 @@
 """
 
 
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask
+app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
@@ -24,5 +24,5 @@ def hbnb():
     """
     return 'HBNB!'
 
-if __name__ == '__main__'():
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
