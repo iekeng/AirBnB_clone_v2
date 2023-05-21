@@ -49,13 +49,13 @@ def python_text(text='cool'):
     return result
 
 
-@app.route('/number/<int: n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-    """ This function displays `Python <text>`
-        when the '/python/' route is visited on the
-        server. <text> default is set to 'cool'.
+    """ This function displays `<n> is a number`
+        when the '/number/' route is visited on the
+        server.
     """
-    result = "%d is a number" % escape(n)
+    result = "%d is a number" % n
     return result
 
 
