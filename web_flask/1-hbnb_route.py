@@ -24,7 +24,7 @@ def hbnb():
         when the '/hbnb' route is visited on the
         server. <text> default is set to 'cool'.
     """
-    return 'HBNB!'
+    return 'HBNB'
 
 
 if __name__ == '__main__':
