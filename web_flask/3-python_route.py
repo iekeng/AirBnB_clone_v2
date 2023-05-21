@@ -44,7 +44,7 @@ def python_text(text='is cool'):
         server.
     """
     text = text.replace('_', ' ')
-    result = "Python %s" % escape(text)
+    result = "Python %s" % escape((text))
     return result
 
 
