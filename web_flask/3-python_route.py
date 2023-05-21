@@ -37,7 +37,8 @@ def c_text(text='cool'):
     return result
 
 
-@app.route('/python/(<text>)', strict_slashes=False)
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python_text(text='is cool'):
     """ This function displays `Python <text>`
         when the '/python/' route is visited on the
