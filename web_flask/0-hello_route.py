@@ -10,10 +10,13 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def 0-hello_route():
+def index():
     """ This function displays 'Hello HBNB'
         when the '/' route is visited on the
         server
     """
 
     return 'Hello HBNB!'
+
+if __name__ == '__main__'():
+    app.run(host='0.0.0.0', port=5000)

@@ -4,8 +4,8 @@
     trigger the specific decorated function.
 """
 
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask
+app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
@@ -59,3 +59,7 @@ def number_template(n):
         server.
     """
     return render_template('6-number_odd_or_even.html', n=n)
+
+if __name__ =='__main__'():
+    app.run(host='0.0.0.0', port=5000)
+    

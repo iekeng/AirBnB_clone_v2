@@ -4,8 +4,8 @@
     trigger the specific decorated function.
 """
 
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask, escape
+app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():

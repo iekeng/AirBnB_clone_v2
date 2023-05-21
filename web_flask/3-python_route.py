@@ -4,8 +4,8 @@
     the specific decorated function.
 """
 
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask, escape
+app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def index():
@@ -16,7 +16,7 @@ def index():
     return 'Hello HBNB!'
 
 @app.route('/hbnb', strict_slashes=False)
-def hbnb:
+def hbnb():
     """ This function displays `HBNB`
         when the '/hbnb' route is visited on the 
         server. <text> default is set to 'cool'.
@@ -42,3 +42,6 @@ def python_text(text='is cool'):
     text = text.replace('_', ' ')
     result = "Python %s" % escape(text)
     return result
+
+if __name__ == '__main__'():
+    app.run(host='0.0.0.0', port=5000)
