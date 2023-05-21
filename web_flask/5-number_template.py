@@ -4,7 +4,7 @@
     trigger the specific decorated function.
 """
 
-from flask import Flask, escape
+from flask import Flask, escape, render_template
 app = Flask(__name__)
 
 
