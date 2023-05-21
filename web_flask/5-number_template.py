@@ -30,20 +30,19 @@ def hbnb():
 def c_text(text='is cool'):
     """ This function displays `C <text>`
         when the '/c/' route is visited on the
-        server. Underscores in the url are replaced
-        with space characters.
+        server.  <text> default is set to 'cool'.
     """
     text = text.replace('_', ' ')
     result = "C %s" % escape(text)
     return result
 
 
-@app.route('/python/(<text>)', strict_slashes=False)
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python_text(text='cool'):
     """ This function displays `Python <text>`
-        when the '/python/' route is visited on the
-        server. Underscores in the url are replaced
-        with space characters.
+        when the '/python/' route is visited.
+        <text> default is set to 'cool'.
     """
     text = text.replace('_', ' ')
     result = "Python %s" % escape(text)
@@ -67,3 +66,7 @@ def number_template(n):
         server.
     """
     return render_template('5-number.html', n=n)
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
